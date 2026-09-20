@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/BrunoDelani/personal-financial-manager-back-end#readme",
   "dependencies": {
+    "argon2": "^0.45.1",
     "express": "^5.2.1",
-    "mongoose": "^9.10.1"
+    "mongoose": "^9.10.1",
+    "mongoose-paginate-v2": "^1.9.5"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
