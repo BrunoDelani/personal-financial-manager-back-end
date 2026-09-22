@@ -1,5 +1,7 @@
+import { Types } from "mongoose";
+
 export interface IUser {
-    id?: string;
+    id: Types.ObjectId;
     email: string;
     name: string;
     passwordHash: string;
@@ -18,7 +20,12 @@ export interface IUserOutput {
     name: string;
 }
 
-export interface IUserAutenticate {
+export interface IUserAutenticateInput {
     email: string;
     password: string;
+}
+
+export interface IUserAutenticateOutput {
+    accessToken: string;
+    refreshToken: string;
 }

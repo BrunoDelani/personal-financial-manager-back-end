@@ -1,8 +1,9 @@
 import express from 'express';
-import routes from './api/routes/index.js'
+import routes from './routes/index.js'
 import './database/connection-mongoDB.js'
 import 'dotenv/config';
-import { errorHandler } from './api/middlewares/error-handler.js';
+import { errorHandler } from './middlewares/error-handler.js';
+import cookieParser from 'cookie-parser';
 
 
 class App {
@@ -15,7 +16,8 @@ class App {
     }
 
     private middlewares(): void {
-        this.express.use(express.json())
+        this.express.use(express.json());
+        this.express.use(cookieParser());
     }
 
     private routes(): void {

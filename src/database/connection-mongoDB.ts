@@ -7,7 +7,7 @@ class Database {
     }
 
     connect() {
-        const dbConnectionPath: string = `mongodb+srv://${process.env.DATABASE_USERNAME}:${process.env.DATABASE_PASSWORD}@${process.env.DATABASE_CLUSTER}.${process.env.DATABASE_CODE}.mongodb.net/a`;
+        const dbConnectionPath: string = `mongodb+srv://${process.env.DATABASE_USERNAME}:${process.env.DATABASE_PASSWORD}@${process.env.DATABASE_CLUSTER}.${process.env.DATABASE_CODE}.mongodb.net/${process.env.DATABASE_COLLECTION}`;
         mongoose.connect(dbConnectionPath);
         mongoose.connection.on('error', () => {
             console.log('Could not connect to database.');

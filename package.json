@@ -22,12 +22,16 @@
   "homepage": "https://github.com/BrunoDelani/personal-financial-manager-back-end#readme",
   "dependencies": {
     "argon2": "^0.45.1",
+    "cookie-parser": "^1.4.7",
     "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.10.1",
     "mongoose-paginate-v2": "^1.9.5"
   },
   "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
     "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^26.6.2",
     "dotenv": "^18.0.1",
     "tsx": "^4.23.13",

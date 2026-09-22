@@ -20,15 +20,6 @@ class UserController {
             next(error);
         }
     }
-
-    async authenticateUser(req: Request, res: Response, next: NextFunction) {
-        try {
-            const response = await userService.authenticateUser(req.body)
-            return res.status(200).json(response);
-        } catch (error) {
-            next(error);
-        }
-    }
 }
 
 export default new UserController();
